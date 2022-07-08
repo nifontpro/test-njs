@@ -1,7 +1,8 @@
 import {FC} from 'react';
 import Link from "next/link";
+import MainContainer from "../components/MainContainer";
 
-interface IUser {
+export interface IUser {
 	id: number,
 	name: string
 }
@@ -9,7 +10,7 @@ interface IUser {
 const Users: FC<{ users: IUser[] }> = ({users}) => {
 
 	return (
-		<div>
+		<MainContainer keywords="Пользователи">
 			<h1>Список пользователей</h1>
 			<ul>
 				{users.map(user =>
@@ -20,7 +21,7 @@ const Users: FC<{ users: IUser[] }> = ({users}) => {
 					</li>
 				)}
 			</ul>
-		</div>
+		</MainContainer>
 	);
 };
 
